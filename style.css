@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(14, 19, 77, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgba(56, 236, 0, 0.6);
+    transition: all 0.2s linear;
+  
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(144, 247, 144);
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: rgba(55, 13, 71, 0.8);
+}
+body{
+    overflow-x: hidden;
+}
+
+header{
+    height: 10vh;
+    display: block;
+    background-color: black;
+    color: white;  
+}
+
+.container--header{
+    margin: auto;
+    max-width: 1281px;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container--header h1{
+    padding-left: 5px;
+}
+
+
+.container--header ul{
+    display: flex;
+}
+.container--header ul li{
+    display: block;
+    list-style: none;
+    margin: 15px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.container--header ul li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -10px;
+    border-radius: 2px;
+    left: 0;
+    transform-origin: left;
+    background-color:rgb(206, 255, 127);
+    
+    transition: all 0.25s ease-in-out;
+}
+
+.container--header ul li:hover::after{
+    transform:scaleX(1);
+    
+    
+}
+
+
+.fundo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-image:linear-gradient(to top, rgb(51, 4, 70) , rgb(0, 0, 0))
+    
+}
+
+.largura {
+    display: flex;
+    max-width: 1281px;  /* Mudar para width 1281 para ficar no canto */
+}
+
+.bloco-apresentacao h4{
+  color: white;
+
+
+}
+
+
+.bloco-apresentacao{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 300px;
+}
+
+.apresentacao{
+    color: white;
+    margin-left: 15px;
+    
+}
+
+.apresentacao:hover{
+    background-color: red;
+}
+
+.wrapper{
+  display: flex;
+  
+  left: -20px;
+  
+}
+
+
+.wrapper .icon{
+ 
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span{
+  display: block;
+  height: 40px;
+  width: 40px;
+  background:rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i{
+  line-height: 40px;
+  font-size: 20px;
+}
+.wrapper .icon .tooltip{
+  position: relative;
+  margin-bottom: -15px;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon a{
+    text-decoration: none;
+    color: white;
+}
+.icon .tooltip:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span{
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.wrapper .linkedin:hover span,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip:before{
+  background: #0e76a8;
+}
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip:before{
+  background: #34af23;
+}
+.wrapper .google:hover span,
+.wrapper .google:hover .tooltip,
+.wrapper .google:hover .tooltip:before{
+  background: #db4a39;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background: #333;
+}
