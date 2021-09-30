@@ -153,7 +153,7 @@ header{
 }
 
 .apresentacao span {
-  font-size: 20px;
+  font-size: 16px;
   font-family: Lato;
  
 }
@@ -346,6 +346,7 @@ header{
 .largura-maxima {
   display: flex;
   max-width: 1281px;
+  font-size: 16px;
   background-color: transparent;
 }
 
@@ -433,7 +434,7 @@ header{
 .vmax-card h1{
   color: white;
   margin-top: 25px;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-left: 25px;
 }
 
@@ -460,14 +461,14 @@ header{
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
   border-radius:15px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   overflow:hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   pointer-events: visible;
   pointer-events: none;
   
@@ -490,11 +491,11 @@ header{
   position: absolute;
   top:-30px;
   right:30px;
-  font-size: 4em;
+  font-size: 3em;
   color: rgba(255,255,255, 0.5);
   pointer-events: visible;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  margin-top: 15px;
+  margin-top: 20px;
   pointer-events: visible;
 }
 
@@ -515,14 +516,14 @@ header{
   position: absolute;
   top:-80px;
   right:30px;
-  font-size: 8em;
+  font-size: 6em;
   color: rgba(255,255,255, 0.5);
   pointer-events: visible;
 
 }
 
 .container .card .content h3{
-  font-size: 24px;
+  font-size: 16px;
   color: #fff;
   z-index: 1;
   pointer-events: visible;
@@ -584,7 +585,7 @@ footer{
 
 
 
-@media (max-width:1050px) {
+@media screen and (max-width:1050px) {
   .grupo-1, .grupo-2 {
     display: flex;
     flex-direction: column;
@@ -593,25 +594,35 @@ footer{
   }
   .projeto {
     height: 150px;
-
+    font-size: 100%;
     width: 90vw;
     margin: 10px;
   }
-}
-@media (max-width:600px) {
-  
-  
-  .projeto h3{
-    font-size: 240px;
-  }
 
-  
-}
-@media (max-width:550px) {
-  
-  .projeto {
-    height: 250px;
-    
-  }
+ 
 }
 
+
+@media  (max-width:768px){
+  .largura-maxima {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #texto{
+    margin-bottom: 25px;
+    padding:15px;
+
+  }
+
+  .container--header ul{
+    display: none;
+  }
+
+
+  .wrapper .icon .tooltip{
+    font-size: 10px;
+  }
+
+}
