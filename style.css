@@ -486,7 +486,7 @@ header{
 
 .Acard {
   min-height: 90vh;
-  background-image: url('https://images.alphacoders.com/986/986566.jpg');
+  background-image: url('https://wallpaperaccess.com/full/909284.png');
   filter: brightness(1);
   background-size: cover;
   background-position: center;
@@ -523,8 +523,8 @@ header{
 
 .container .card{
   position: relative;
-  width: 280px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
   border-radius:15px;
@@ -584,6 +584,10 @@ header{
   pointer-events: visible;
 }
 
+.container .card .tailwind{
+  right: 20px;
+}
+
 .container .card:hover .html{
   background: rgba(255, 0, 0, 0.9);
   
@@ -604,6 +608,7 @@ header{
 .container .card:hover .tailwind{
   background: rgba(144, 209, 209, 0.9);
   color: #000000;
+  
 }
 .container .card:hover .sass{
   background: rgba(255, 0, 191, 0.9);
@@ -828,10 +833,12 @@ form button:hover {
 }
 
 @media (max-width:500px){
-  .Acard{
-    background-image: url('https://www.xtrafondos.com/wallpapers/vertical/cielo-estrellado-en-montanas-nevadas-3355.jpg');
-  }
   
+ .container .card .content h3{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
   .container .card{
     width: 30vw;
     height: 150px;

@@ -25,7 +25,7 @@ const sr = ScrollReveal({
   sr.reveal(".bloco-apresentacao", { delay: 200 });
   //Sobre mim delay
   sr.reveal(".imagem-delay", {});
-  sr.reveal(".titulo-delay", { delay: 200 });
+  sr.reveal(".card", { delay: 200 });
   sr.reveal(".descricao-delay", { delay: 400 });
   sr.reveal(".cards-interval", { interval: 400 });
 
@@ -34,4 +34,6 @@ toggle.onclick = ()=>{
     toggle.classList.toggle('active')
 }
 
-
+document.querySelectorAll('.projeto').addEventListener('click' , ()=>{
+    window.navigator.vibrate(500)
+})
