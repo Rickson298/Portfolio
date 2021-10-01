@@ -14,15 +14,20 @@
   color: white;
 }
 
-.menu-phone {
-  
-  position: relative;
-  width: 100vw;
-  height: 0vh;
-  background-color: rgba(0, 0, 0, 1) ;
-  
-  
-  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+.voltar{
+  position: fixed;
+  background: blue;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  right: 15px;
+  bottom: 15px;
+  z-index: 999;
+  cursor: pointer;
   
 }
 
@@ -757,9 +762,8 @@ form button:hover {
 
 
 
-
-
-@media screen and (max-width:1050px) {
+@media   (max-width:1050px) {
+  
   .grupo-1, .grupo-2 {
     display: flex;
     flex-direction: column;
@@ -778,7 +782,7 @@ form button:hover {
 }
 
 
-@media  (max-width:768px){
+@media screen and (max-width:768px){
   .largura-maxima {
     flex-direction: column;
     justify-content: center;
@@ -789,10 +793,15 @@ form button:hover {
     flex-direction: column;
   }
   
-  .container .card{
+  .container{
+    padding-top: 25px;
+    padding-bottom:25px;
+  }
+  .container .card  {
     width: 30vw;
     height: 250px;
     margin:10px;
+    
 
   }
 
@@ -832,6 +841,7 @@ form button:hover {
 
 }
 
+
 @media (max-width:500px){
   
  .container .card .content h3{
@@ -841,8 +851,8 @@ form button:hover {
 
   .container .card{
     width: 30vw;
-    height: 150px;
-    margin:10px;
+    height: auto;
+    margin:20px;
 
   }
 

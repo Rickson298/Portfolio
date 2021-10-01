@@ -25,15 +25,15 @@ const sr = ScrollReveal({
   sr.reveal(".bloco-apresentacao", { delay: 200 });
   //Sobre mim delay
   sr.reveal(".imagem-delay", {});
-  sr.reveal(".card", { delay: 200 });
+  sr.reveal("", { delay: 200 });
   sr.reveal(".descricao-delay", { delay: 400 });
-  sr.reveal(".cards-interval", { interval: 400 });
+  sr.reveal(".card", { interval: 400 });
 
 const toggle = document.getElementById('toggle');
 toggle.onclick = ()=>{
     toggle.classList.toggle('active')
 }
 
-document.querySelectorAll('.projeto').addEventListener('click' , ()=>{
-    window.navigator.vibrate(500)
+document.querySelector('.voltar').addEventListener('click' , ()=>{
+    window.scrollTo(0,0)
 })
