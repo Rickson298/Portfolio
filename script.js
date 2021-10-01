@@ -18,15 +18,20 @@ const sr = ScrollReveal({
   });
   
   //Home delay
-  sr.reveal("#texto", { delay: 800 });
-  sr.reveal(".icon2", { delay: 800 });
+  sr.reveal("#texto", { delay: 400 });
+  sr.reveal(".icon2", { delay: 400 });
   sr.reveal(".projeto", { delay: 400 });
   sr.reveal("", { delay: 400 });
-  sr.reveal(".bloco-apresentacao", { delay: 400 });
+  sr.reveal(".bloco-apresentacao", { delay: 200 });
   //Sobre mim delay
   sr.reveal(".imagem-delay", {});
   sr.reveal(".titulo-delay", { delay: 200 });
   sr.reveal(".descricao-delay", { delay: 400 });
   sr.reveal(".cards-interval", { interval: 400 });
 
-   
+const toggle = document.getElementById('toggle');
+toggle.onclick = ()=>{
+    toggle.classList.toggle('active')
+}
+
+
