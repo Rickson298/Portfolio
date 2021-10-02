@@ -55,13 +55,15 @@ document.getElementById('toggle').addEventListener('click' , ()=>{
     if(document.querySelector('.menu-phone').style.height == "100vh"){
         document.querySelector('.menu-phone').style.height = "0vh"
         document.querySelector('.menu-phone ul').style.display = "none"
+        document.querySelector('header').style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+        
        
     
         
     }else{
         document.querySelector('.menu-phone').style.height = "100vh"
         document.querySelector('.menu-phone').style.position = "fixed"
-       
+       document.querySelector('header').style.backgroundColor = "black"
         document.querySelector('.menu-phone ul').style.display = "flex"
     }
 });
