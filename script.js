@@ -36,4 +36,40 @@ toggle.onclick = ()=>{
 
 document.querySelector('.voltar').addEventListener('click' , ()=>{
     window.scrollTo(0,0)
+   
 })
+
+function voltarSumir(){
+    if(window.scrollTo(0.0)){
+        document.querySelector('.voltar').style.opacity = '0'
+
+    }
+}
+
+
+
+
+
+
+document.getElementById('toggle').addEventListener('click' , ()=>{
+    if(document.querySelector('.menu-phone').style.height == "100vh"){
+        document.querySelector('.menu-phone').style.height = "0vh"
+        document.querySelector('.menu-phone ul').style.display = "none"
+       
+    
+        
+    }else{
+        document.querySelector('.menu-phone').style.height = "100vh"
+        document.querySelector('.menu-phone').style.position = "fixed"
+       
+        document.querySelector('.menu-phone ul').style.display = "flex"
+    }
+});
+
+function fechar(){
+    toggle.classList.remove('active')    
+    document.querySelector('.menu-phone').style.height = "0vh"
+        document.querySelector('.menu-phone ul').style.display = "none"
+       
+
+}
