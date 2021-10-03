@@ -34,18 +34,19 @@ toggle.onclick = ()=>{
     toggle.classList.toggle('active')
 }
 
-document.querySelector('.voltar').addEventListener('click' , ()=>{
-    window.scrollTo(0,0)
-   
-})
+
 
 function voltarSumir(){
-    if(window.scrollTo(0.0)){
-        document.querySelector('.voltar').style.opacity = '0'
+    window.scrollTo(0,0)
+    document.querySelector('.voltar').style.width = '40px'
+    document.querySelector('.voltar').style.height = '100px'
+    setTimeout( ()=>{
+        document.querySelector('.voltar').style.height = '50px'
+        document.querySelector('.voltar').style.width = '50px'
+        document.querySelector('.voltar').style.borderRadius = '15px'
+    }, 400)
 
-    }
 }
-
 
 
 

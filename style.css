@@ -32,47 +32,20 @@
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
- .voltar::after{
-  content: '';
+ 
+
+
+
+
+.voltar img{
   position: absolute;
-  background: white;
-  height: 10px;
-  width: 3px;
-  transform: rotate(25deg);
-  justify-content: center;
-  align-content: center;
-  margin-right: 5px;
-  border-radius: 5px;
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- }
- .voltar::before{
-  content: '';
-  position: absolute;
-  background: white;
-  height: 10px;
-  width: 3px;
-  margin-left: 5px;
-  transform: rotate(-25deg);
-  justify-content: center;
-  align-content: center;
-  border-radius: 5px;
-  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- }
-z
-
- .voltar:hover::before , .voltar:hover::after{
-   top:20px;
- }
-
-
-
-.voltar:hover{
-  height:100px;
-  width: 40px;
-  border-radius: 20px;
-  
 }
 
+
+.voltar:hover img{
+  top: 10px;
+}
 
 #toggle{
   position: relative;
@@ -126,7 +99,7 @@ z
   color:rgb(255, 255, 255);
   height:0vh;
   width:100vw;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(15px);
   z-index: 1;
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
