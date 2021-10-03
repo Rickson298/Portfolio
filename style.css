@@ -767,7 +767,7 @@ footer{
 }
 
 form input:focus,  textarea:focus{
-  box-shadow: 1px 1px 10px yellow , -1px -1px 10px yellow;
+  box-shadow: 1px 1px 10px rgb(23, 0, 87) , -1px -1px 10px rgb(23, 0, 87);
   border: none;
   outline: none;
   background: rgba(255, 255, 255, 0.952) ;
