@@ -1,4 +1,7 @@
 ### Olá pessoal, esse é o meu portfólio. Caso alguém tenha alguma dúvida sobre como fiz determinada funcionalidade, ou se quiser dar um feedback, não hesite em me falar :)
+
+<a href="https://rickson298.github.io/Portfolio/" target="_blanked"> Clique aqui para acessar o projeto</a>
+
 ![image](https://user-images.githubusercontent.com/88171582/135856027-dca6d07b-98b6-494c-867a-46cca14c2dae.png)
 ![image](https://user-images.githubusercontent.com/88171582/135856081-0420648a-065a-4584-9dfa-2b0b7c997f31.png)
 ![image](https://user-images.githubusercontent.com/88171582/135856137-9a56ad05-b0b4-41c9-8bb9-1549023e9f6d.png)
