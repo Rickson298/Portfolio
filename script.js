@@ -17,26 +17,25 @@ const sr = ScrollReveal({
     reset: true,
   });
   
-  //Home delay
-  sr.reveal("#texto", { delay: 400 });
-  sr.reveal(".icon2", { delay: 400 });
-  sr.reveal(".projeto", { delay: 400 });
-  sr.reveal("", { delay: 400 });
-  sr.reveal(".bloco-apresentacao", { delay: 200 });
-  //Sobre mim delay
-  sr.reveal(".imagem-delay", {});
-  sr.reveal("", { delay: 200 });
-  sr.reveal(".descricao-delay", { delay: 400 });
-  sr.reveal(".card", { interval: 400 });
+//Função de scroll reveral 
+
+sr.reveal("#texto", { delay: 400 });
+sr.reveal(".icon2", { delay: 400 });
+sr.reveal(".projeto", { delay: 400 });
+sr.reveal(".bloco-apresentacao", { delay: 200 });
+sr.reveal(".card", { interval: 400 });
+
+
+// Função para fazer o toggle alterar a forma, de ativado para desativado e vice-versa
 
 const toggle = document.getElementById('toggle');
 toggle.onclick = ()=>{
     toggle.classList.toggle('active')
 }
 
+//Função para fazer a pagina subir ao clicar no botão
 
-
-function voltarSumir(){
+function SubirPagina(){
     window.scrollTo(0,0)
     document.querySelector('.voltar').style.width = '40px'
     document.querySelector('.voltar').style.height = '100px'
@@ -49,25 +48,23 @@ function voltarSumir(){
 }
 
 
-
-
+//Função para abrir e fechar o menu mobile
 
 document.getElementById('toggle').addEventListener('click' , ()=>{
     if(document.querySelector('.menu-phone').style.height == "100vh"){
         document.querySelector('.menu-phone').style.height = "0vh"
         document.querySelector('.menu-phone ul').style.display = "none"
         document.querySelector('header').style.backgroundColor = "rgba(0, 0, 0, 0.3)"
-        
-       
-    
-        
+
     }else{
+
         document.querySelector('.menu-phone').style.height = "100vh"
         document.querySelector('.menu-phone').style.position = "fixed"
        document.querySelector('header').style.backgroundColor = "black"
         document.querySelector('.menu-phone ul').style.display = "flex"
     }
 });
+
 
 function fechar(){
     toggle.classList.remove('active')    

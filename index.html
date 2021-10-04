@@ -2,13 +2,22 @@
 
 <html lang="pt-br" >
    <head>
-      <meta charset="utf-8">
-      <title>Rickson Oliveira | Portfólio</title>
-      <meta name='viewport' content='width=device-width, initial-scale=1'/>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <meta name="theme-color" content="#000000"> 
-      <link  href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <title>Rickson Oliveira | Portfólio</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <meta name="theme-color" content="#000000"> 
+    <meta name="description" content="Desenvolvedor Front-End" />
+    <meta
+      name="keywords"
+      content="sites, web, desenvolvimento, programador, Rickson, front-end, designer, ui,freelancer, freela, website, front-end, Desenvolvedor"/>
+      <link
+      rel="shortcut icon"
+      href="./assets/images/Icone-portfolio.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link  href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
    </head>
    <body>
     <header>
@@ -30,11 +39,11 @@
             </ul>
         </div>
     </header>
-    <div onclick="voltarSumir()" class="voltar">
-         <img src="./corner-right-up (1).svg" alt="">
+    <div onclick="SubirPagina()" class="voltar">
+         <img src="./assets/images/corner-right-up (1).svg" alt=""> <!-- Icone-->
     </div>
-    <main class="fundo">   
-        <div class="largura">
+    <main class="fundo-principal">   
+        <div class="largura-maxima-principal">
             <div class="bloco-apresentacao">
                 <div class="apresentacao">
                   <span>  
@@ -63,9 +72,7 @@
                         <div class="tooltip">
                         Whatsapp
                         </div>
-                        <a href="
-                        https://wa.me/+5519988208737?text=Ol%C3%A1,%20podemos%20conversar?
-                        " target="_blanked">
+                        <a href=" https://wa.me/+5519988208737?text=Ol%C3%A1,%20podemos%20conversar?" target="_blanked">
                             <span><i class="fab fa-whatsapp"></i></span>
                         </a>    
                     </div>
@@ -92,9 +99,9 @@
         </div>
     </main>
     <article class="perfil">
-        <div class="largura-maxima">
+        <div class="largura-maxima-perfil">
             <div class="icon2">
-                <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+                <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script> <!-- Icone animado-->
                 <lord-icon
                     src="https://cdn.lordicon.com/nobciafz.json"
                     trigger="loop"
@@ -165,7 +172,7 @@
             </div>           
         </div>             
     </article>
-    <article id="tecnologias" class="Acard">
+    <article id="tecnologias">
         <div class="vmax-card" >
             <h1>Tecnologias</h1>
             <br><br>
@@ -264,14 +271,14 @@
 
     <footer> Create e design by Rickson Oliveira</footer>
 
-    <script type="text/javascript" src="./vanilla-tilt.js"></script>
+    <script type="text/javascript" src="./vanilla-tilt.js"></script> <!-- Efeito ao passar o mouse-->
     <script>
         VanillaTilt.init(document.querySelectorAll(".card"), {
 		max: 3,
 		speed: 400
 	});
     </script>
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script> <!-- Scroll Reveal-->
     <script src="script.js"></script>
    </body>
    
