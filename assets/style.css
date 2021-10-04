@@ -7,37 +7,95 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(82, 114, 255);
-    border-radius: 15px;
-    border: 1px solid rgb(47, 0, 255);
-    transition: all 0.2s linear;
+  background-color: rgb(82, 114, 255);
+  border-radius: 15px;
+  border: 1px solid rgb(47, 0, 255);
+  transition: all 0.2s linear;
   
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(0, 255, 0);
-}
-
 ::-webkit-scrollbar{
-    width: 10px;
-    background-color: black;
+  width: 10px;
+  background-color: black;
 }
 body{
-    overflow-x: hidden;  
+  overflow-x: hidden;  
 }
 
 header{
-    background-color: black;
-    align-content: center;
-    z-index: 999999;
-    display: block;
-    justify-content: space-between;
-    color: white; 
-    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background-color: black;
+  align-content: center;
+  z-index: 999999;
+  display: block;
+  justify-content: space-between;
+  color: white; 
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+.container--header{
+  margin: auto;
+  height: 100%;
+  max-width: 1281px;
+  margin-top: auto;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.container--header h1{
+  display: block;
+  padding-left: 5px;
+  cursor: default;
+  transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container--header h1:hover{
+  color: transparent;
+  -webkit-text-stroke-width: 1px; /* largura da borda */
+  -webkit-text-stroke-color: rgb(115, 255, 0); /* cor da borda */  
+  letter-spacing: 1px;
+}
+
+.container--header ul{
+  display: flex;
+}
+.container--header ul li{
+  display: block;
+  list-style: none;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.container--header nav li a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  background-color: gold;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.container--header nav li a:hover::after{
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left; 
+}
+
  .container--header a{
   text-decoration: none;
   color: white;
@@ -65,9 +123,6 @@ header{
   position: absolute;
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
-
-
 
 #toggle{
   position: relative;
@@ -110,11 +165,9 @@ header{
   background-color: #fff;
   transition: .2s;
   transform: translateY(10px);
-  
 }
 
 .menu-phone{
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +178,6 @@ header{
   backdrop-filter: blur(15px);
   z-index: 1;
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  
 }
 
  .menu-phone ul {
@@ -151,94 +203,17 @@ header{
 }
 
 
-
-
-
-.teste{
-  height: 100vh;
-}
-
-
-
-.container--header{
-    
-    margin: auto;
-    height: 100%;
-    max-width: 1281px;
-    margin-top: auto;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding: 15px;
-    
-
-}
-
-.container--header h1{
-    display: block;
-    
-    padding-left: 5px;
-    cursor: default;
-    transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.container--header h1:hover{
-  color: transparent;
-  -webkit-text-stroke-width: 1px; /* largura da borda */
-  -webkit-text-stroke-color: rgb(115, 255, 0); /* cor da borda */  
-  letter-spacing: 1px;
-}
-
-.container--header ul{
-    display: flex;
-}
-.container--header ul li{
-    display: block;
-    list-style: none;
-    margin: 15px;
-    cursor: pointer;
-    position: relative;
-
-}
-
-.container--header ul li::after{
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  height: 1px;
-  bottom: -7px;
-  left: 0;
-  background-color: #10f22e;
-  transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.container--header ul li:hover::after{
-    transform:scaleX(1);
-   
-  transform-origin: bottom left;
-    
-    
-}
-
 .fundo-principal{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 91vh;
-    
-    background: linear-gradient(-45deg, #e2d8e7 , #000000,#5e3096, #c7b9f0 );
-    background-size: 400% 400%;
-    transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: gradiente 14s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 91vh;
+  background: linear-gradient(-45deg, #e2d8e7 , #000000,#5e3096, #c7b9f0 );
+  background-size: 400% 400%;
+  transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: gradiente 14s ease-in-out infinite;
 }
 
 
@@ -257,8 +232,8 @@ header{
 
 
 .largura-maxima-principal{
-    display: flex;
-    max-width: 1281px;  /* Mudar para width 1281 para ficar no canto */
+  display: flex;
+  max-width: 1281px;  /* Mudar para width 1281 para ficar no canto */
 }
 
 .bloco-apresentacao h4{
@@ -267,10 +242,27 @@ header{
   cursor: default;
 }
 
+.bloco-apresentacao{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 300px;
+}
+
+.apresentacao{
+  padding: 10px;
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  border: 2px solid rgba(99, 16, 16, 0);
+  transition: all .2s cubic-bezier(0.47, 0, 0.900, 0.715);
+}
+
 .apresentacao span {
   font-size: 16px;
   font-family: Lato;
- 
 }
 
 .apresentacao h1 {
@@ -284,15 +276,8 @@ header{
   -webkit-text-stroke-color: rgb(115, 255, 0);
 }
 
-.bloco-apresentacao{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 300px;
-}
-.efeito::after {
+
+.animacao-pisca::after {
   content: '|';
   font-size: 1.5rem;
   margin-left: 5px;
@@ -313,15 +298,7 @@ header{
   }
 }
 
-.apresentacao{
-  padding: 10px;
-    color: white;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    border: 2px solid rgba(99, 16, 16, 0);
-    transition: all .2s cubic-bezier(0.47, 0, 0.900, 0.715);
-    
-}
+
 
 
 
@@ -330,12 +307,10 @@ header{
   margin-left: 0px;
   left: -20px;
   transition: all .2s cubic-bezier(0.47, 0, 0.745, 0.715);
-  
 }
 
 
 .wrapper .icon{
- 
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -430,11 +405,18 @@ header{
   
   min-height: 50vh;
   background: rgb(18, 1, 24);
-    
-  
+
   display: flex;
   justify-content: center;
 }
+
+.largura-maxima-perfil {
+  display: flex;
+  max-width: 1281px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
 
 .icon2 {
   background-color: transparent;
@@ -455,18 +437,10 @@ header{
   height: 100%;
   width: 80%;
   background-color: transparent;
-  
 }
 
-.largura-maxima-perfil {
-  display: flex;
-  max-width: 1281px;
-  font-size: 16px;
-  background-color: transparent;
-}
 
 .projetos{
-  
   min-height: 60vh;
   background: rgba(0,0,0,1);
   display: flex;
@@ -483,7 +457,6 @@ header{
   color: white;
   margin-bottom: 15px;
   margin-top: 25px;
-
 }
 
 .wmaxProjeto {
@@ -493,7 +466,6 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .wmaxProjeto h4{
@@ -515,9 +487,18 @@ header{
   align-items: center;
   border: 1px solid transparent;
   transition: all 0.4s ease-in-out;
-  
-
 }
+
+
+.projeto:hover{
+  border: 1px solid yellow;
+}
+
+.projeto h3{
+  font-size: 16px;
+  font: weight 3px;
+}
+
 
 .link-github a{
   text-decoration: none;
@@ -526,26 +507,8 @@ header{
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-
-
-
-.projeto h3{
-  font-size: 16px;
-  font: weight 3px;
-}
-
-.projeto:hover{
-  
-  
- 
-  border: 1px solid yellow;
-
-}
-
-
 .grupo-1, .grupo-2 {
   display: flex;
-  
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -560,8 +523,6 @@ header{
   justify-content: center;
   color: white;
   align-items: center;
-  
-  
 }
 
 .vmax-card h1{
@@ -581,8 +542,6 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
   flex-wrap: wrap;
   z-index: 1;
 }
@@ -595,7 +554,6 @@ header{
   box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
   border-radius:15px;
   background: rgba(255, 255, 255, 0.2);
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -603,17 +561,12 @@ header{
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
   pointer-events: visible;
-  
-  
-  
 }
 
 .card li{
   list-style: none;
   font-weight: normal;
 }
-
-
 
 .container .card .content{
   padding: 20px;
@@ -634,9 +587,7 @@ header{
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   margin-top: 20px;
   pointer-events: visible;
-  
   border-radius: 5px;
-  
 }
 
 .container .card:hover .teste-card{
@@ -723,17 +674,6 @@ header{
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  
-}
-
-footer{
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
 }
 
 .email{
@@ -742,7 +682,6 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .largura-email{
@@ -772,13 +711,9 @@ form {
   align-items: center;
   padding: 15px 25px;
   transition: all linear .2s;
-  
-  
   background: linear-gradient(to top , rgba(0, 0, 7, 0.5) , rgba(153, 59, 216, 0.973) ,rgba(88, 27, 129, 0.973));
   border-radius: 15px;
 }
-
-
 
 form input{
   border: 0px;
@@ -787,7 +722,6 @@ form input{
   width: 350px;
   border-radius: 10px;
   transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  
 }
 
 form h1{
@@ -823,19 +757,17 @@ form button:hover {
 
 
 
+footer{
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*Responsividade*/
 
 @media   (max-width:1050px) {
   
@@ -851,45 +783,32 @@ form button:hover {
     width: 90vw;
     margin: 10px;
   }
-
-
-
 }
 
 
 @media screen and (max-width:768px){
-  .largura-maxima {
+  
+  header{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    
+  }
+
+.container--header{
+    width: 100vw;
+  }
+
+  .wrapper .icon .tooltip{
+    font-size: 10px;
+  }
+  
+  .largura-maxima-perfil {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  header{
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
-    
-  }
-  
-
-
-  .wmaxProjeto h4{
-    margin-left: 15px;
-    font-size: 12px;
-    font-weight:lighter;
-    
-  }
-  .container--header{
-    background-color:'tranparent; 
-  }
-
-  .fundo-principal{
-    height: 100vh;
-  }
-
-  .largura-email{
-    flex-direction: column;
-  }
-  
   .container{
     padding-top: 25px;
     padding-bottom:25px;
@@ -898,11 +817,15 @@ form button:hover {
     width: 30vw;
     height: 250px;
     margin:10px;
-    
-
   }
 
-  
+  .container--header ul{
+    display: none;
+  }
+
+  .fundo-principal{
+    height: 100vh;
+  }
 
   .container .card:hover .teste-card{
     font-size: 1rem;
@@ -928,24 +851,21 @@ form button:hover {
 
   }
 
-  .container--header ul{
-    display: none;
+  .wmaxProjeto h4{
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight:lighter;
+    
+  }
+  .container--header{
+    background-color:'tranparent'; 
   }
 
-
-  .wrapper .icon .tooltip{
-    font-size: 10px;
+  .largura-email{
+    flex-direction: column;
   }
-
-  header{
-    position: fixed;
-  }
-.container--header{
-    width: 100vw;
-  }
-
-}
-
+  
+ } 
 
 @media (max-width:500px){
   

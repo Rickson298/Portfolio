@@ -7,7 +7,7 @@ function typeWriter(elemento){
     });
 }
 
-const titulo = document.querySelector('.efeito');
+const titulo = document.querySelector('.animacao-pisca');
 typeWriter(titulo);
 
 const sr = ScrollReveal({
@@ -33,16 +33,19 @@ toggle.onclick = ()=>{
     toggle.classList.toggle('active')
 }
 
-//Função para fazer a pagina subir ao clicar no botão
+//Função e animação para fazer a pagina subir ao clicar no botão
 
 function SubirPagina(){
     window.scrollTo(0,0)
     document.querySelector('.voltar').style.width = '40px'
     document.querySelector('.voltar').style.height = '100px'
+    document.querySelector('.voltar img').style.top = '20px'
+
     setTimeout( ()=>{
         document.querySelector('.voltar').style.height = '50px'
         document.querySelector('.voltar').style.width = '50px'
         document.querySelector('.voltar').style.borderRadius = '15px'
+        document.querySelector('.voltar img').style.top = ''
     }, 400)
 
 }
