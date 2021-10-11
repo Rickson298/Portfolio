@@ -270,11 +270,6 @@ header{
   transition: all .2s cubic-bezier(0.215, 0.610, 0.355, 1); 
 }
 
-.apresentacao h1:hover {
-  color: rgba(0, 0, 0, 0.4);
-  -webkit-text-stroke-width: .5px; /* largura da borda */
-  -webkit-text-stroke-color: rgb(115, 255, 0);
-}
 
 
 .animacao-pisca::after {
@@ -439,6 +434,46 @@ header{
   background-color: transparent;
 }
 
+.curriculo{
+  margin-top: 25px;
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border:1px solid blue;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.curriculo a{
+  text-decoration: none;
+  color: white;
+}
+
+.curriculo::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  transform: skewX(30deg)  translate(-150% , -50%);
+  transition: all 0.5s;
+}
+
+.curriculo:hover{
+  background-color: #000000;
+  color:#fff;
+  border:1px solid #ccc; 
+  box-shadow: 3px 3px 10px blue, -3px -3px 10px blue;
+}
+
+.curriculo:hover::before{
+  transform: skewX(30deg) translate(150% , -50%);
+  transition-delay: 0.1s;
+}
 
 .projetos{
   min-height: 60vh;
@@ -473,8 +508,55 @@ header{
   font-weight: normal;
   margin-bottom: 25px;
 }
+.container--icons{
+ 
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container--icons .IconProject{
+  
+  opacity: 0;
+  font-size: 12px;
+  background: red;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: -50px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.IconProject:hover{
+  
+  transform: scale(1.15);
+  
+  
+}
+
+.projeto:hover .IconProject{
+  opacity: 1;
+  margin-top: 15px;
+  
+}
+
+.IconProject.css{
+  background:rgba(109, 135, 221, 0.9) ;
+}
+.IconProject.js{
+  background:rgba(29, 250, 0, 0.9) ;
+  color: #000000;
+}
+.IconProject.react{
+  background:rgba(76, 153, 255, 0.9);
+}
+.IconProject.ts{
+  background:rgba(25, 90, 175, 0.9);
+}
 
 .projeto {
+  
   height: 150px;
   background-color: rgba(114, 114, 114, 0.2);
   border-radius: 20px;
@@ -487,6 +569,8 @@ header{
   align-items: center;
   border: 1px solid transparent;
   transition: all 0.4s ease-in-out;
+  padding: 15px;
+  text-align: center;
 }
 
 
@@ -495,6 +579,7 @@ header{
 }
 
 .projeto h3{
+  
   font-size: 16px;
   font: weight 3px;
 }
@@ -523,6 +608,7 @@ header{
   justify-content: center;
   color: white;
   align-items: center;
+  box-shadow: inset 1px -100px 90px -6px black;
 }
 
 .vmax-card h1{
@@ -544,6 +630,7 @@ header{
   align-items: center;
   flex-wrap: wrap;
   z-index: 1;
+  
 }
 
 .container .card{
@@ -713,6 +800,7 @@ form {
   transition: all linear .2s;
   background: linear-gradient(to top , rgba(0, 0, 7, 0.5) , rgba(153, 59, 216, 0.973) ,rgba(88, 27, 129, 0.973));
   border-radius: 15px;
+  z-index: 999;
 }
 
 form input{
